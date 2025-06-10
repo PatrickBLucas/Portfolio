@@ -1,0 +1,17 @@
+.header {
+    background-color: #0a192f;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
+
+.name {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+.contact p,
+.contact a {
+    margin: 4px 0;
+    color: #64ffda;
+}
