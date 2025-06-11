@@ -1,2 +1,5 @@
-This is a test on a summary of the project
-#hastag test too
+The very site you're reading was created by me using React, Javascript, and CSS.
+
+This project automatically makes a new tile for every project I upload to GitHub and showcases some of the things I am capable of doing.
+
+#React #JavaScript #CSS
