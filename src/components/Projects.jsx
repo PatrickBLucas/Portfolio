@@ -17,10 +17,11 @@ const FEATURED = [
     outcome: 'A working deployed system that replaces a paper-based operation with a modern centralized platform built specifically for building materials distribution.',
     stack: ['React', 'Vite', 'Node.js', 'Express', 'PostgreSQL', 'JWT Auth'],
     screenshots: [
-      { src: 'https://raw.githubusercontent.com/patrickblucas/nebp-erp/main/snapshot.png', caption: 'Purchase Orders Module' },
-      { src: 'https://raw.githubusercontent.com/patrickblucas/nebp-erp/main/snapshot2.png', caption: 'Operations Dashboard' },
+      { src: 'https://raw.githubusercontent.com/patrickblucas/nebp-erp/main/snapshot.png', caption: 'Sales Orders' },
+      { src: 'https://raw.githubusercontent.com/patrickblucas/nebp-erp/main/snapshot2.png', caption: 'Purchase Orders' },
+      { src: 'https://raw.githubusercontent.com/patrickblucas/nebp-erp/main/snapshot3.png', caption: 'Dashboard' },
     ],
-    github: 'https://github.com/patrickblucas/nebp-erp',
+    github: null,
     stats: [
       { value: '0', label: 'Prior System' },
       { value: '6', label: 'User Roles' },
@@ -41,7 +42,7 @@ const FEATURED = [
     screenshots: [
       { src: 'https://raw.githubusercontent.com/patrickblucas/orgill-orderer/main/snapshot.png', caption: 'Order Run Interface' },
     ],
-    github: 'https://github.com/patrickblucas/orgill-orderer',
+    github: null,
     stats: [
       { value: '3-5D', label: 'Before' },
       { value: '15M',  label: 'After' },
@@ -283,9 +284,11 @@ function CaseStudyModal({ project, onClose, onImageZoom }) {
             </div>
           </div>
 
-          <a className="btn-primary" href={project.github} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
-            <GitHubIcon size={13} /> View on GitHub
-          </a>
+          {project.github && (
+            <a className="btn-primary" href={project.github} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
+              <GitHubIcon size={13} /> View on GitHub
+            </a>
+          )}
         </div>
       </div>
     </Modal>
@@ -321,6 +324,10 @@ function RepoCard({ repo, highlight, onImageZoom }) {
   );
 }
 
+// Stable constants outside component to avoid useEffect dependency warnings
+const username = 'patrickblucas';
+const featuredRepoNames = FEATURED.map((p) => p.repoName);
+
 // ── MAIN COMPONENT ────────────────────────────────────────────────────────────
 export default function Projects() {
   const [repos, setRepos] = useState([]);
@@ -328,9 +335,6 @@ export default function Projects() {
   const [loading, setLoading] = useState(true);
   const [activeProject, setActiveProject] = useState(null);
   const [zoomedImage, setZoomedImage] = useState(null);
-
-  const username = 'patrickblucas';
-  const featuredRepoNames = FEATURED.map((p) => p.repoName);
 
   useEffect(() => {
     (async () => {
@@ -361,7 +365,7 @@ export default function Projects() {
       <p className="section-subtitle">Systems built to solve real operational problems. None were requested.</p>
 
       {/* Featured */}
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(440px, 1fr))', gap: '1.25rem', marginBottom: '3rem' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(440px, 100%), 1fr))', gap: '1.25rem', marginBottom: '3rem' }}>
         {FEATURED.map((p, i) => (
           <FeaturedCard key={p.id} project={p} onClick={setActiveProject} animClass={`fade-up-${i + 1}`} />
         ))}

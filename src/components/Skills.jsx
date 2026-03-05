@@ -46,7 +46,7 @@ export default function Skills() {
       <p className="section-subtitle">Technologies, frameworks, and tools built and used in production.</p>
 
       {/* Skill grid */}
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1rem', marginBottom: '3rem' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(280px, 100%), 1fr))', gap: '1rem', marginBottom: '3rem' }}>
         {SKILL_GROUPS.map((group, i) => (
           <div key={group.category} className={`card fade-up fade-up-${Math.min(i + 1, 5)}`}>
             <p style={{ fontFamily: 'var(--font-mono)', fontSize: '0.62rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--amber)', marginBottom: '0.85rem' }}>
@@ -68,7 +68,7 @@ export default function Skills() {
       </div>
 
       <div style={{ background: 'var(--bg-surface)', border: '1px solid var(--border)', borderRadius: 'var(--radius-lg)', overflow: 'hidden' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr 2fr', padding: '0.75rem 1.25rem', background: 'var(--bg-raised)', borderBottom: '1px solid var(--border)' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(120px, 100%), 1fr))', padding: '0.75rem 1.25rem', background: 'var(--bg-raised)', borderBottom: '1px solid var(--border)' }}>
           {['Tool', 'Type', 'Stack'].map((h) => (
             <span key={h} style={{ fontFamily: 'var(--font-mono)', fontSize: '0.6rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--text-dim)' }}>
               {h}
@@ -80,7 +80,7 @@ export default function Skills() {
             key={tool.name}
             style={{
               display: 'grid',
-              gridTemplateColumns: '2fr 1fr 2fr',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(min(120px, 100%), 1fr))',
               padding: '0.85rem 1.25rem',
               borderBottom: i < TOOLS.length - 1 ? '1px solid var(--border)' : 'none',
               transition: 'var(--transition)',

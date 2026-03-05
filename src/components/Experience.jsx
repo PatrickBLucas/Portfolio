@@ -97,8 +97,8 @@ export default function Experience() {
       <div style={{ marginBottom: '2rem' }}>
         <a
           className="btn-primary"
-          href="https://github.com/PatrickBLucas/Portfolio/raw/main/public/Patrick_Lucas_Resume_2025.pdf"
-          download="Patrick_Lucas_Resume_2025.pdf"
+          href="https://github.com/PatrickBLucas/Portfolio/raw/main/public/Patrick_Lucas_Master_Resume.pdf"
+          download="Patrick_Lucas_Master_Resume.pdf"
         >
           Download Resume
         </a>
