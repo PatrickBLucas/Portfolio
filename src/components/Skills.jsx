@@ -30,9 +30,9 @@ const SKILL_GROUPS = [
 const TOOLS = [
   { name: 'NEBP-ERP',                  type: 'Full-Stack App',    stack: 'React / Node / PostgreSQL' },
   { name: 'Orgill Orderer',            type: 'Procurement Tool',  stack: 'React / Node / Google Sheets API' },
-  { name: 'Facility Routing Matrix',   type: 'Decision Tool',     stack: 'Google Maps API / Sheets' },
-  { name: 'Job Estimation Calculator', type: 'Sales Tool',        stack: 'Google Sheets' },
-  { name: 'Load Optimization Tool',    type: 'Logistics Tool',    stack: 'Google Sheets' },
+  { name: 'Facility Routing Matrix',   type: 'Decision Tool',     stack: 'Google Sheets — 169 towns, 7 yards' },
+  { name: 'Material Specification Calc', type: 'Sales Tool', stack: 'Google Sheets — 6 yrs, 15+ users' },
+  { name: 'Order Calculator',           type: 'Order Gen Tool',    stack: 'Google Sheets + Apps Script — 7 suppliers' },
   { name: 'Vendor Order Calculator',   type: 'Procurement Tool',  stack: 'Google Sheets' },
   { name: 'UPM Inventory Tracker',     type: 'Inventory Tool',    stack: 'Google Sheets + Email Alerts' },
   { name: 'Scale Weight Converter',    type: 'Operations Tool',   stack: 'Google Sheets' },

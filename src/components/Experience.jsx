@@ -22,22 +22,22 @@ const JOBS = [
         label: 'Procurement & Vendor Operations',
         bullets: [
           'Designed and implemented Orgill Orderer following unplanned purchaser departure with no transition plan or backfill, managing $70K+ in annual purchases and compressing seasonal ordering from 3-5 days to under 15 minutes',
-          'Eliminated split-box penalties by consolidating fragmented multi-PO ordering into single optimized submissions with automated case pack rounding logic',
-          'Orchestrated $850K+ in multi-vendor construction logistics spanning 35+ truckloads across 2 major projects with zero delivery delays',
-          'Identified $75K+ in annual cost savings through waste elimination, process optimization, and vendor negotiations',
+          'Eliminated split-box penalties by consolidating fragmented multi-PO ordering into single optimized submissions with automated case pack rounding logic. Absorbed the full purchasing function with no backfill, eliminating landing cost misallocation that had persisted undetected for years',
+          'Following a vendor dispute that exposed the reconciliation risks of ERP Xitem lot tracking, designed and deployed a custom release tracking system now used across all large-scale direct-ship projects. Applied across 4-5 multi-truckload jobs totaling $850K+ over 2-3 years, coordinating vendor releases, matching invoices against BOLs, and invoicing tickets individually. One project alone required 45 releases. Zero unreconciled deliveries since implementation.',
         ],
       },
       {
         label: 'Self-Initiated Tool Development',
         bullets: [
           'Built suite of operational tools without direction — all in active daily use. Full descriptions in Projects section.',
-          'During active ERP transition, built automated multi-vendor logistics tracking via Google Sheets and Apps Script to maintain supply chain visibility when the incoming system could not yet support those workflows',
+          'During active ERP transition, built automated multi-vendor logistics tracking via Google Sheets and Apps Script to maintain supply chain visibility for cement, block, and paver ordering when the incoming system could not yet support those workflows',
           'Built modular inventory planning tool with split-box logic, stability thresholds, and vendor exclusions to enforce procurement compliance standards the ERP could not enforce independently',
         ],
       },
       {
         label: 'Operations & Compliance',
         bullets: [
+          'Appointed to lead multi-site physical inventory reconciliation across 5 locations during concurrent staffing gaps. Applied forensic review methodology to variance reports: identifying offsetting adjustments, directing targeted recounts, and tracing discrepancies through sales history, receiving logs, and prior adjustment records. Applied self-imposed $350 materiality threshold below the $500 company standard. Requested independent oversight of own facility counts to maintain separation of accountability. Compiled findings into executive-facing reports reviewed by VP and President.',
           'Manage full-scope facility operations: payroll for 8+ union and non-union staff, utilities, vendor services, dispatch coordination, and OSHA compliance',
           'Enforced OSHA standards through monthly HammerTech audits, red-tag protocols, and incident documentation — contributing to zero lost-time incidents',
           'Applied ISO 9001 principles and DMAIC methodology to systematically identify process gaps and reduce rework across all operational touchpoints',
