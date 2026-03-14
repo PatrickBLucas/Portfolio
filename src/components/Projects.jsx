@@ -4,6 +4,8 @@ import Modal from 'react-modal';
 Modal.setAppElement('#root');
 
 // ── FEATURED PROJECTS ─────────────────────────────────────────────────────────
+const PU = process.env.PUBLIC_URL || '';
+
 const FEATURED = [
   {
     id: 'nebp-erp',
@@ -11,15 +13,15 @@ const FEATURED = [
     name: 'NEBP-ERP',
     badge: 'ERP System',
     tagline: 'Custom Full-Stack Enterprise Resource Planning System',
-    description: 'A company-owned subsidiary was running entirely on carbon copy paper and interoffice mail with zero formal inventory infrastructure. I designed and built a complete ERP from the ground up to replace it.',
-    problem: 'No inventory system. No order tracking. No vendor records. Every transaction documented by hand on paper forms routed through interoffice mail.',
+    description: 'A subsidiary was running entirely on carbon copy paper and interoffice mail with no inventory infrastructure of any kind. I designed and built a complete ERP from the ground up to replace it.',
+    problem: 'No inventory system. No order tracking. No vendor records. Every transaction documented by hand on paper forms routed through interoffice mail. The operation had no visibility into stock levels, open orders, or receivables at any point in time.',
     solution: 'Full-stack ERP with real-time inventory management, complete sales order lifecycle (Open to Invoiced), purchase order creation and receiving, customer and vendor management, and role-based access control across six operational roles: Admin, Owner, Logistics, Accounts Payable, Accounts Receivable, and Viewer.',
-    outcome: 'A working deployed system that replaces a paper-based operation with a modern centralized platform built specifically for building materials distribution.',
+    outcome: 'A fully deployed system that replaced a paper-based operation with a modern centralized platform. The same architecture applies to any small distributor or multi-location operation running without formal inventory infrastructure.',
     stack: ['React', 'Vite', 'Node.js', 'Express', 'PostgreSQL', 'JWT Auth'],
     screenshots: [
-      { src: 'https://raw.githubusercontent.com/patrickblucas/nebp-erp/main/snapshot.png', caption: 'Sales Orders' },
-      { src: 'https://raw.githubusercontent.com/patrickblucas/nebp-erp/main/snapshot2.png', caption: 'Purchase Orders' },
-      { src: 'https://raw.githubusercontent.com/patrickblucas/nebp-erp/main/snapshot3.png', caption: 'Dashboard' },
+      { src: `${PU}/images/nebp_erp.png`, caption: 'Sales Orders' },
+      { src: `${PU}/images/nebp_erp_2.png`, caption: 'Purchase Orders' },
+      { src: `${PU}/images/nebp_erp_3.png`, caption: 'Dashboard' },
     ],
     github: null,
     stats: [
@@ -34,13 +36,13 @@ const FEATURED = [
     name: 'Orgill Orderer',
     badge: 'Procurement Tool',
     tagline: 'Procurement Automation and Decision Support System',
-    description: 'The prior ordering process relied on memory, produced recurring stockouts that corrupted demand data, and took 3-5 days of manual website review each season. I replaced it entirely.',
-    problem: 'Memory-based ordering across 4-5 fragmented POs per cycle, misallocating $55 landing costs onto low-value orders. Recurring stockouts prevented accurate demand tracking and blocked volume needed for tier pricing.',
-    solution: 'Data-driven procurement system ingesting live ERP inventory exports, applying hybrid demand forecasting using prior year sales with YTD fallback, optimizing to case pack quantities, matching active promo programs by ship window, and generating a single upload-ready PO file.',
-    outcome: 'Seasonal ordering compressed from 3-5 days to under 15 minutes. Single consolidated PO per cycle. Split-box penalties eliminated. Over $70K in annual purchases managed with consistent accuracy.',
+    description: 'A seasonal procurement cycle across 50+ SKUs and multiple supplier programs was being managed from memory. It took 3-5 days per cycle, produced recurring stockouts, and generated fragmented POs that triggered avoidable cost penalties. I replaced it entirely.',
+    problem: 'Memory-based ordering across 4-5 fragmented POs per cycle, misallocating $55 landing costs onto low-value orders. Recurring stockouts corrupted demand history and blocked the volume thresholds needed for tier pricing. No systematic way to match promotional ship windows to open inventory needs.',
+    solution: 'Data-driven procurement system ingesting live inventory exports, applying hybrid demand forecasting using prior-year sales with YTD fallback logic, optimizing to case pack quantities, matching active promo programs by ship window, and generating a single upload-ready PO file. The forecasting logic handles new SKUs, seasonality gaps, and partial-year data without manual intervention.',
+    outcome: 'Ordering cycle compressed from 3-5 days to under 15 minutes. Single consolidated PO per cycle. Split-box penalties eliminated. Over $70K in annual purchases managed with consistent, auditable accuracy. This replaced an earlier spreadsheet-based system I built using Apps Script -- when the business outgrew it, I rebuilt the whole thing as a full-stack application.',
     stack: ['React', 'Vite', 'Node.js', 'Express', 'Google Sheets API', 'Excel Export'],
     screenshots: [
-      { src: 'https://raw.githubusercontent.com/patrickblucas/orgill-orderer/main/snapshot.png', caption: 'Order Run Interface' },
+      { src: `${PU}/images/orgill_orderer.png`, caption: 'Order Run Interface' },
     ],
     github: null,
     stats: [
@@ -48,6 +50,68 @@ const FEATURED = [
       { value: '15M',  label: 'After' },
       { value: '$70K', label: 'Annual Volume' },
     ],
+  },
+  {
+    id: 'thrivemetrics',
+    repoName: 'peloton-dashboard',
+    name: 'ThriveMetrics',
+    badge: 'Full-Stack PWA',
+    tagline: 'Personal Fitness & Nutrition Dashboard',
+    description: 'A full-stack progressive web app that consolidates fitness and nutrition data from multiple APIs into a single personal dashboard. Built from scratch with no backend infrastructure -- Google Sheets serves as the database.',
+    problem: 'Fitness and nutrition data lives across disconnected platforms: Peloton for workouts, Fitbit for daily activity, manual logs for food. No single view. No automated sync. No way to track calories in vs. calories out against a computed daily target without switching between apps.',
+    solution: 'React 18 PWA with OAuth2 authentication, automated Peloton workout sync via a custom Apps Script integration with token refresh handling, Fitbit daily data sync, and four nutrition entry modes: AI text estimation, live barcode scanning using the native BarcodeDetector API, photo recognition, and manual entry. Barcode lookup queries Open Food Facts and USDA FoodData Central in parallel with UPC-A to EAN-13 fallback. BMR and TDEE computed client-side using the Mifflin-St Jeor formula. All data stored and updated via the Google Sheets API.',
+    outcome: 'A fully functional installable PWA running in production with no monthly infrastructure cost. Demonstrates end-to-end full-stack architecture: OAuth2 flows, third-party API integration, serverless backend via Apps Script, and a polished mobile-first UI. This evolved from an earlier spreadsheet-based data analysis project -- when the manual workflow hit its ceiling, I rebuilt it as a full application.',
+    stack: ['React 18', 'Google Sheets API', 'Google Apps Script', 'Recharts', 'Anthropic Claude API', 'Open Food Facts API', 'USDA FoodData Central', 'OAuth2', 'PWA', 'GitHub Pages'],
+    screenshots: [
+      { src: `${PU}/images/thrive_metrics_mobile.jpg`, caption: 'Workout Tracking' },
+      { src: `${PU}/images/thrive_metrics_mobile_2.jpg`, caption: 'Food Log' },
+      { src: `${PU}/images/thrive_metrics_desktop.png`, caption: 'Desktop View' },
+    ],
+    github: 'https://github.com/patrickblucas/peloton-dashboard',
+    stats: [
+      { value: '4', label: 'Entry Modes' },
+      { value: '3', label: 'API Sources' },
+      { value: '$0', label: 'Infra Cost' },
+    ],
+  },
+  {
+    id: 'renees-magic-garden',
+    repoName: 'Renees-Magic-Garden',
+    name: "Renee's Magic Garden",
+    badge: 'IoT System',
+    tagline: 'Remote Monitoring & Control for an Aeroponic Grow System',
+    description: 'A fully custom IoT system built to run a year-round self-maintaining aeroponic garden. Flutter mobile app talks to a Raspberry Pi over a REST API to monitor sensors and control every aspect of the grow environment remotely.',
+    problem: 'Aeroponic growing requires precise, continuous management of multiple interdependent variables -- aeration cycles, water temperature, pH levels, light schedules, humidity -- that are impractical to monitor manually around the clock. Missing a parameter drift can kill an entire crop.',
+    solution: 'Flutter mobile app with Firebase authentication communicating with a Python-based Raspberry Pi controller via REST API. Controls include aeration timing and duration, water temperature monitoring, pH sensing with automated dosing pump to add fertilizer on demand, tank agitation, grow light scheduling and physical height adjustment, and a humidity-triggered fan purge. A connected camera supports live feeds and timelapse photography of the grow cycle.',
+    outcome: 'Software fully built and hardware integration designed. System is ready to deploy. Demonstrates end-to-end IoT architecture: mobile frontend, cloud authentication, REST API communication, and physical hardware control across sensors and actuators on a single-board computer.',
+    stack: ['Flutter', 'Python', 'Raspberry Pi', 'Firebase Auth', 'REST API', 'IoT'],
+    screenshots: [
+      { src: `${PU}/images/magic_garden.png`, caption: 'App Interface' },
+    ],
+    github: 'https://github.com/patrickblucas/Renees-Magic-Garden',
+    stats: [
+      { value: '8+', label: 'Sensors & Controls' },
+      { value: '1', label: 'Raspberry Pi' },
+      { value: '24/7', label: 'Designed For' },
+    ],
+  },
+];
+
+// ── MANUAL REPO CARDS (non-featured, no GitHub API dependency) ────────────────
+const MANUAL_REPOS = [
+  {
+    id: 'logistics-optimizer',
+    name: 'Logistics-Optimizer',
+    html_url: 'https://github.com/patrickblucas/Logistics-Optimizer',
+    imageUrl: `${PU}/images/Logistics_Matrix.png`,
+    description: 'Network routing reference matrix mapping driving distances from 7 facility locations to all 169 Connecticut towns with automatic closest-yard lookup. Built as a static reference after a dynamic Google Maps API implementation generated hundreds of simultaneous calls. Pre-calculating all distances eliminated API costs and latency while maintaining full accuracy for dispatch routing and FOB decisions across the distribution network.',
+  },
+  {
+    id: 'truck-balancer',
+    name: 'Truck-Balancer',
+    html_url: 'https://github.com/patrickblucas/truck-balancer',
+    imageUrl: `${PU}/images/truck_balancer.png`,
+    description: 'Load optimization tool for balancing multi-stop delivery routes across an available fleet. Reduces deadhead miles and improves yard utilization by distributing orders across trucks based on capacity and stop sequencing.',
   },
 ];
 
@@ -296,8 +360,8 @@ function CaseStudyModal({ project, onClose, onImageZoom }) {
 }
 
 // ── GITHUB REPO CARD ──────────────────────────────────────────────────────────
-function RepoCard({ repo, highlight, onImageZoom }) {
-  const imageUrl = `https://raw.githubusercontent.com/patrickblucas/${repo.name}/main/snapshot.png`;
+function RepoCard({ repo, highlight, imageUrl: imageUrlProp, onImageZoom }) {
+  const imageUrl = imageUrlProp || `https://raw.githubusercontent.com/patrickblucas/${repo.name}/main/snapshot.png`;
 
   return (
     <div
@@ -326,7 +390,18 @@ function RepoCard({ repo, highlight, onImageZoom }) {
 
 // Stable constants outside component to avoid useEffect dependency warnings
 const username = 'patrickblucas';
-const featuredRepoNames = FEATURED.map((p) => p.repoName);
+const featuredRepoNames = FEATURED.map((p) => p.repoName.toLowerCase());
+const manualRepoNames = MANUAL_REPOS.map((r) => r.name.toLowerCase());
+const excludedRepos = [
+  ...featuredRepoNames,
+  ...manualRepoNames,
+  'portfolio',
+  'patrickblucas-website',
+  'efficient-ordering',
+  'peloton-data-analysis',
+  'proxmox-project',
+  'facility-routing-matrix',
+];
 
 // ── MAIN COMPONENT ────────────────────────────────────────────────────────────
 export default function Projects() {
@@ -341,7 +416,7 @@ export default function Projects() {
       try {
         const res = await fetch(`https://api.github.com/users/${username}/repos?sort=updated&per_page=50`);
         const data = await res.json();
-        const filtered = data.filter((r) => !featuredRepoNames.includes(r.name.toLowerCase()) && !r.fork);
+        const filtered = data.filter((r) => !excludedRepos.includes(r.name.toLowerCase()) && !r.fork);
 
         const hl = {};
         await Promise.all(filtered.map(async (repo) => {
@@ -372,14 +447,17 @@ export default function Projects() {
       </div>
 
       {/* Other repos */}
-      {!loading && repos.length > 0 && (
+      {(!loading || MANUAL_REPOS.length > 0) && (
         <>
           <div className="divider">
             <span className="divider-label">Other Repositories</span>
             <div className="divider-line" />
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '1rem' }}>
-            {repos.map((repo) => (
+            {MANUAL_REPOS.map((repo) => (
+              <RepoCard key={repo.id} repo={repo} imageUrl={repo.imageUrl} onImageZoom={setZoomedImage} />
+            ))}
+            {!loading && repos.map((repo) => (
               <RepoCard key={repo.id} repo={repo} highlight={highlights[repo.name]} onImageZoom={setZoomedImage} />
             ))}
           </div>

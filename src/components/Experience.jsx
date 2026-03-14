@@ -5,42 +5,17 @@ const JOBS = [
     title: 'Senior Operations & Systems Manager',
     company: 'O&G Industries',
     location: 'Waterbury, CT',
-    dates: '2019 — Present',
+    dates: '2019 -- Present',
     promoted: 'Promoted from Assistant Operations Manager',
-    summary: 'Regional building materials distributor operating 7 locations with $10M+ annual revenue at the Waterbury facility. Manage $2M inventory portfolio, 8+ staff, and full facility operations while serving as ERP transition lead and internal systems architect.',
+    summary: 'Ten years into a single employer and the scope kept growing -- not because the role expanded on paper, but because the infrastructure kept breaking and I kept fixing it. $2M inventory portfolio, 8+ staff, 7-location ERP transition lead, and a suite of operational tools none of which anyone asked for.',
     sections: [
       {
-        label: 'ERP Strategy & Systems',
+        label: null,
         bullets: [
-          'Appointed lead facility manager for enterprise-wide ERPLY ERP rollout across 7 locations; mapped full workflow lifecycle spanning POS, procurement, dispatch, and financial reconciliation',
-          'Authored 25-page ERP implementation roadmap and 16-page iterative markup document identifying system gaps, workflow friction points, and 40+ usability enhancements',
-          'Identified and corrected systemic cost allocation error on consolidated vendor deliveries — validated by IT systems administrator — that had been misapplied to lowest-value POs for years',
-          'Proactively declined oversight of own facility variance reconciliation to enforce separation of duties; flagged high-risk discount loopholes and designed inventory-aware pricing logic',
-        ],
-      },
-      {
-        label: 'Procurement & Vendor Operations',
-        bullets: [
-          'Designed and implemented Orgill Orderer following unplanned purchaser departure with no transition plan or backfill, managing $70K+ in annual purchases and compressing seasonal ordering from 3-5 days to under 15 minutes',
-          'Eliminated split-box penalties by consolidating fragmented multi-PO ordering into single optimized submissions with automated case pack rounding logic. Absorbed the full purchasing function with no backfill, eliminating landing cost misallocation that had persisted undetected for years',
-          'Following a vendor dispute that exposed the reconciliation risks of ERP Xitem lot tracking, designed and deployed a custom release tracking system now used across all large-scale direct-ship projects. Applied across 4-5 multi-truckload jobs totaling $850K+ over 2-3 years, coordinating vendor releases, matching invoices against BOLs, and invoicing tickets individually. One project alone required 45 releases. Zero unreconciled deliveries since implementation.',
-        ],
-      },
-      {
-        label: 'Self-Initiated Tool Development',
-        bullets: [
-          'Built suite of operational tools without direction — all in active daily use. Full descriptions in Projects section.',
-          'During active ERP transition, built automated multi-vendor logistics tracking via Google Sheets and Apps Script to maintain supply chain visibility for cement, block, and paver ordering when the incoming system could not yet support those workflows',
-          'Built modular inventory planning tool with split-box logic, stability thresholds, and vendor exclusions to enforce procurement compliance standards the ERP could not enforce independently',
-        ],
-      },
-      {
-        label: 'Operations & Compliance',
-        bullets: [
-          'Appointed to lead multi-site physical inventory reconciliation across 5 locations during concurrent staffing gaps. Applied forensic review methodology to variance reports: identifying offsetting adjustments, directing targeted recounts, and tracing discrepancies through sales history, receiving logs, and prior adjustment records. Applied self-imposed $350 materiality threshold below the $500 company standard. Requested independent oversight of own facility counts to maintain separation of accountability. Compiled findings into executive-facing reports reviewed by VP and President.',
-          'Manage full-scope facility operations: payroll for 8+ union and non-union staff, utilities, vendor services, dispatch coordination, and OSHA compliance',
-          'Enforced OSHA standards through monthly HammerTech audits, red-tag protocols, and incident documentation — contributing to zero lost-time incidents',
-          'Applied ISO 9001 principles and DMAIC methodology to systematically identify process gaps and reduce rework across all operational touchpoints',
+          'Served as primary evaluator for a 7-location ERPLY ERP implementation. Conducted two structured assessment rounds covering POS, procurement, inventory, receiving, customer management, and back office operations -- producing a 25-page gap analysis and 16-page iterative follow-up. Identified 40+ configuration gaps, pricing risks, security exposures, and workflow requirements the platform would need to support before deployment.',
+          'Inherited the full Orgill purchasing function with no transition and no backfill. Built a procurement system from scratch that compressed a 3-5 day manual ordering cycle to under 15 minutes. $70K+ in annual purchases managed with consistent, auditable accuracy.',
+          'Appointed to lead multi-site physical inventory reconciliation across 5 locations during concurrent staffing gaps. Applied forensic methodology across variance reports -- tracing discrepancies through sales history, receiving logs, and prior adjustments. Requested independent oversight of my own facility counts. Findings compiled into reports reviewed by VP and President.',
+          'Built a suite of operational tools without direction -- routing matrix, procurement automation, load optimization, inventory tracking, job quoting. None were requested. All remain in active daily use.',
         ],
       },
     ],
@@ -49,18 +24,15 @@ const JOBS = [
     title: 'Assistant Operations Manager',
     company: 'O&G Industries',
     location: 'Bridgeport, CT',
-    dates: '2017 — 2019',
+    dates: '2017 -- 2019',
     promoted: 'Promoted from Inventory Control Specialist',
-    summary: 'Managed regional warehouse serving as consolidation hub for 7-site distribution network.',
+    summary: 'Managed regional warehouse serving as consolidation hub for a 7-site distribution network.',
     sections: [
       {
-        label: 'Key Contributions',
+        label: null,
         bullets: [
-          'Authored and presented 7-page operational improvement proposal grounded in JIT logistics and workforce motivation theory; recognized by executive team and resulted in promotion',
-          'Led warehouse layout redesign, SKU rationalization, and lean/demand forecasting improvements for multi-site material transfers',
-          'Redesigned defective tinting process during vendor transition by implementing categorized formula SOPs, quality control checks, and visual references, eliminating nonconformities',
-          'Trained and cross-developed 10+ employees across yard, gate, and sales counter roles',
-          'Maintained 3.98 GPA earning B.S. in Business Management during full-time employment',
+          'Wrote and presented a 7-page operational improvement proposal grounded in JIT and workforce motivation theory. It was recognized by the executive team and resulted in promotion.',
+          'Led warehouse layout redesign, SKU rationalization, lean improvements, and safety enhancements. Trained and cross-developed 10+ employees across yard, gate, and counter roles.',
         ],
       },
     ],
@@ -69,15 +41,13 @@ const JOBS = [
     title: 'Inventory Control Specialist',
     company: 'O&G Industries',
     location: 'Stamford, CT',
-    dates: '2015 — 2017',
-    summary: 'Managed inbound/outbound gate operations, BOL verification, and niche warehouse inventory.',
+    dates: '2015 -- 2017',
+    summary: 'Gate operations, BOL verification, and warehouse inventory management.',
     sections: [
       {
-        label: 'Key Contributions',
+        label: null,
         bullets: [
-          'Managed inbound/outbound gate operations: truck coordination, BOL verification, unloading direction, and final load checks',
-          'Oversaw dedicated warehouse containing PVC fittings, drainage components, block materials, and water mitigation products',
-          'Designed and built mobile wheelbarrow assembly workstation from crate and pallet jack without being asked, dramatically improving throughput for high-demand product builds',
+          'Designed and built a mobile wheelbarrow assembly workstation from crate and pallet jack without being asked. Dramatically improved throughput on a high-demand product. Same instinct, earlier stage.',
         ],
       },
     ],
@@ -141,10 +111,12 @@ export default function Experience() {
                 </p>
 
                 {job.sections.map((section) => (
-                  <div key={section.label} style={{ marginBottom: '1.25rem' }}>
-                    <p style={{ fontFamily: 'var(--font-mono)', fontSize: '0.62rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--amber)', marginBottom: '0.6rem' }}>
-                      {section.label}
-                    </p>
+                  <div key={section.label || 'main'} style={{ marginBottom: '1.25rem' }}>
+                    {section.label && (
+                      <p style={{ fontFamily: 'var(--font-mono)', fontSize: '0.62rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--amber)', marginBottom: '0.6rem' }}>
+                        {section.label}
+                      </p>
+                    )}
                     <ul style={{ paddingLeft: '1.25rem', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
                       {section.bullets.map((b, i) => (
                         <li key={i} style={{ fontSize: '0.875rem', color: 'var(--text-muted)', lineHeight: 1.7 }}>
