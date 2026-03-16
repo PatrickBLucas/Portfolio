@@ -16,7 +16,7 @@ const FEATURED = [
     description: 'A wholesale subsidiary was one resignation away from operational collapse. Every price, every customer relationship, every vendor instruction, and every inventory figure lived in one person\'s head. I built the infrastructure that replaced that dependency.',
     problem: 'The operation ran entirely on carbon copy paper and institutional knowledge. Orders came in by phone, got written on three-part carbon copies, and made their way to billing through a chain of handoffs that broke regularly. There was no inventory record, no formal PO system, and no order tracking. Delivery instructions lived in conversation, which meant vendor shipments routinely landed at the wrong location, triggering unplanned truck runs and scheduling disruptions nobody could track. When the lynchpin was unavailable, sales stopped.',
     solution: 'Full-stack ERP built from scratch: real-time inventory tracking with allocation visibility, sales order lifecycle from Open to Invoiced, formal purchase order creation and receiving, customer and vendor records that live in the system instead of someone\'s memory, and role-based access control across six operational roles. The operation went from zero infrastructure to a system capable of running without its single point of failure.',
-    outcome: 'Deployed and operational. The same architecture applies to any small distributor or multi-location operation where critical business knowledge is concentrated in people instead of systems. Most businesses have a version of this problem. This is what the fix looks like.',
+    outcome: 'Fully built and tested. Awaiting presentation to the President for rollout approval. The same architecture applies to any small distributor or multi-location operation where critical business knowledge is concentrated in people instead of systems. Most businesses have a version of this problem. This is what the fix looks like.',
     stack: ['React', 'Vite', 'Node.js', 'Express', 'PostgreSQL', 'JWT Auth'],
     screenshots: [
       { src: `${PU}/images/nebp_erp.png`, caption: 'Sales Orders' },
@@ -404,6 +404,11 @@ function RepoCard({ repo, highlight, imageUrl: imageUrlProp, onImageZoom }) {
       <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)', lineHeight: 1.6, flex: 1 }}>
         {highlight || repo.description || 'No description available.'}
       </p>
+      {repo.html_url && (
+        <a className="btn-ghost" href={repo.html_url} target="_blank" rel="noopener noreferrer" style={{ fontSize: '0.68rem', padding: '0.45rem 0.9rem', alignSelf: 'flex-start' }}>
+          <GitHubIcon size={11} /> View Repo
+        </a>
+      )}
     </div>
   );
 }
