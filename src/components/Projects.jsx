@@ -13,10 +13,10 @@ const FEATURED = [
     name: 'NEBP-ERP',
     badge: 'ERP System',
     tagline: 'Custom Full-Stack Enterprise Resource Planning System',
-    description: 'A subsidiary was running entirely on carbon copy paper and interoffice mail with no inventory infrastructure of any kind. I designed and built a complete ERP from the ground up to replace it.',
-    problem: 'No inventory system. No order tracking. No vendor records. Every transaction documented by hand on paper forms routed through interoffice mail. The operation had no visibility into stock levels, open orders, or receivables at any point in time.',
-    solution: 'Full-stack ERP with real-time inventory management, complete sales order lifecycle (Open to Invoiced), purchase order creation and receiving, customer and vendor management, and role-based access control across six operational roles: Admin, Owner, Logistics, Accounts Payable, Accounts Receivable, and Viewer.',
-    outcome: 'A fully deployed system that replaced a paper-based operation with a modern centralized platform. The same architecture applies to any small distributor or multi-location operation running without formal inventory infrastructure.',
+    description: 'A wholesale subsidiary was one resignation away from operational collapse. Every price, every customer relationship, every vendor instruction, and every inventory figure lived in one person\'s head. I built the infrastructure that replaced that dependency.',
+    problem: 'The operation ran entirely on carbon copy paper and institutional knowledge. Orders came in by phone, got written on three-part carbon copies, and made their way to billing through a chain of handoffs that broke regularly. There was no inventory record, no formal PO system, and no order tracking. Delivery instructions lived in conversation, which meant vendor shipments routinely landed at the wrong location, triggering unplanned truck runs and scheduling disruptions nobody could track. When the lynchpin was unavailable, sales stopped.',
+    solution: 'Full-stack ERP built from scratch: real-time inventory tracking with allocation visibility, sales order lifecycle from Open to Invoiced, formal purchase order creation and receiving, customer and vendor records that live in the system instead of someone\'s memory, and role-based access control across six operational roles. The operation went from zero infrastructure to a system capable of running without its single point of failure.',
+    outcome: 'Deployed and operational. The same architecture applies to any small distributor or multi-location operation where critical business knowledge is concentrated in people instead of systems. Most businesses have a version of this problem. This is what the fix looks like.',
     stack: ['React', 'Vite', 'Node.js', 'Express', 'PostgreSQL', 'JWT Auth'],
     screenshots: [
       { src: `${PU}/images/nebp_erp.png`, caption: 'Sales Orders' },
@@ -35,11 +35,11 @@ const FEATURED = [
     repoName: 'orgill-orderer',
     name: 'Orgill Orderer',
     badge: 'Procurement Tool',
-    tagline: 'Procurement Automation and Decision Support System',
-    description: 'A seasonal procurement cycle across 50+ SKUs and multiple supplier programs was being managed from memory. It took 3-5 days per cycle, produced recurring stockouts, and generated fragmented POs that triggered avoidable cost penalties. I replaced it entirely.',
-    problem: 'Memory-based ordering across 4-5 fragmented POs per cycle, misallocating $55 landing costs onto low-value orders. Recurring stockouts corrupted demand history and blocked the volume thresholds needed for tier pricing. No systematic way to match promotional ship windows to open inventory needs.',
-    solution: 'Data-driven procurement system ingesting live inventory exports, applying hybrid demand forecasting using prior-year sales with YTD fallback logic, optimizing to case pack quantities, matching active promo programs by ship window, and generating a single upload-ready PO file. The forecasting logic handles new SKUs, seasonality gaps, and partial-year data without manual intervention.',
-    outcome: 'Ordering cycle compressed from 3-5 days to under 15 minutes. Single consolidated PO per cycle. Split-box penalties eliminated. Over $70K in annual purchases managed with consistent, auditable accuracy. This replaced an earlier spreadsheet-based system I built using Apps Script -- when the business outgrew it, I rebuilt the whole thing as a full-stack application.',
+    tagline: 'Demand-Driven Procurement Automation',
+    description: 'A 3-5 day manual procurement process was generating stockouts, split-box penalties, missed promotions, and landing cost misallocations that nobody could see. I replaced the entire process with a system that runs in under 15 minutes and produces consistent results regardless of who runs it.',
+    problem: 'The prior process depended entirely on one person\'s memory and manual execution at every step. Products got missed because there was no systematic way to check everything. Quantities were estimated by feel. Case pack rules required manual compliance. Promotional pricing required extra navigation steps most people skipped. Each missed item meant a separate PO, and each separate PO meant the $55 landing fee plus 2% of product value got allocated to that order alone instead of spreading across the full load, silently inflating unit costs on specific products. Nobody knew it was happening because the error was baked into the receiving process invisibly.',
+    solution: 'Demand-driven procurement system that starts from a full inventory export rather than memory. Calculates order quantities against actual sales data with shelf life adjustments built in, with perishable products ordered conservatively to prevent expiration losses. Checks for active promotional pricing automatically. Enforces case pack compliance to eliminate split-box penalties. Consolidates everything into a single PO, which means landing costs distribute correctly across the full order every time. Output uploads directly to the vendor portal.',
+    outcome: 'Ordering cycle compressed from 3-5 days to under 15 minutes. Single consolidated PO per cycle. Split-box penalties eliminated. Over $70K in annual purchases managed with consistent, auditable accuracy. When the previous purchaser left with no transition plan, the function was absorbed with no backfill and no disruption. This replaced an earlier spreadsheet-based system; when the business outgrew it, I rebuilt it as a full-stack application.',
     stack: ['React', 'Vite', 'Node.js', 'Express', 'Google Sheets API', 'Excel Export'],
     screenshots: [
       { src: `${PU}/images/orgill_orderer.png`, caption: 'Order Run Interface' },
@@ -47,7 +47,7 @@ const FEATURED = [
     github: null,
     stats: [
       { value: '3-5D', label: 'Before' },
-      { value: '15M',  label: 'After' },
+      { value: '15M', label: 'After' },
       { value: '$70K', label: 'Annual Volume' },
     ],
   },
@@ -57,10 +57,10 @@ const FEATURED = [
     name: 'ThriveMetrics',
     badge: 'Full-Stack PWA',
     tagline: 'Personal Fitness & Nutrition Dashboard',
-    description: 'A full-stack progressive web app that consolidates fitness and nutrition data from multiple APIs into a single personal dashboard. Built from scratch with no backend infrastructure -- Google Sheets serves as the database.',
-    problem: 'Fitness and nutrition data lives across disconnected platforms: Peloton for workouts, Fitbit for daily activity, manual logs for food. No single view. No automated sync. No way to track calories in vs. calories out against a computed daily target without switching between apps.',
-    solution: 'React 18 PWA with OAuth2 authentication, automated Peloton workout sync via a custom Apps Script integration with token refresh handling, Fitbit daily data sync, and four nutrition entry modes: AI text estimation, live barcode scanning using the native BarcodeDetector API, photo recognition, and manual entry. Barcode lookup queries Open Food Facts and USDA FoodData Central in parallel with UPC-A to EAN-13 fallback. BMR and TDEE computed client-side using the Mifflin-St Jeor formula. All data stored and updated via the Google Sheets API.',
-    outcome: 'A fully functional installable PWA running in production with no monthly infrastructure cost. Demonstrates end-to-end full-stack architecture: OAuth2 flows, third-party API integration, serverless backend via Apps Script, and a polished mobile-first UI. This evolved from an earlier spreadsheet-based data analysis project -- when the manual workflow hit its ceiling, I rebuilt it as a full application.',
+    description: 'I applied DMAIC to my own health the same way I apply it to broken processes at work. The existing fitness apps did not give me the data I needed to analyze my own performance. So I built my own.',
+    problem: 'Fitness and nutrition data lived across disconnected platforms with no single view, no automated sync, and no way to track calories in versus calories out against a computed daily target. More importantly, there was no feedback loop: no system that looked at trends over time and told you what the data meant and what to do about it.',
+    solution: 'React 18 PWA with automated Peloton workout sync, Fitbit daily data sync, and four nutrition entry modes: AI text estimation, live barcode scanning via the native BarcodeDetector API, photo recognition, and manual entry. Barcode lookup queries Open Food Facts and USDA FoodData Central in parallel. BMR and TDEE computed client-side using the Mifflin-St Jeor formula. The control phase is a weekly AI coaching report auto-generated every Monday from four weeks of real data covering workout output, heart rate zones, calorie balance, recovery patterns, and specific goals for the coming week. No manual review. The system tells you what the data says.',
+    outcome: '60 pounds lost. Same methodology as every other system I build: define the problem, measure what matters, analyze the patterns, improve the inputs, build controls that make the outcome sustainable. Different inputs. This evolved from an earlier spreadsheet-based project; when the manual workflow hit its ceiling, I rebuilt it as a full application.',
     stack: ['React 18', 'Google Sheets API', 'Google Apps Script', 'Recharts', 'Anthropic Claude API', 'Open Food Facts API', 'USDA FoodData Central', 'OAuth2', 'PWA', 'GitHub Pages'],
     screenshots: [
       { src: `${PU}/images/thrive_metrics_mobile.jpg`, caption: 'Workout Tracking' },
@@ -71,7 +71,7 @@ const FEATURED = [
     stats: [
       { value: '4', label: 'Entry Modes' },
       { value: '3', label: 'API Sources' },
-      { value: '$0', label: 'Infra Cost' },
+      { value: '60LB', label: 'Lost via DMAIC' },
     ],
   },
   {
@@ -80,10 +80,10 @@ const FEATURED = [
     name: "Renee's Magic Garden",
     badge: 'IoT System',
     tagline: 'Remote Monitoring & Control for an Aeroponic Grow System',
-    description: 'A fully custom IoT system built to run a year-round self-maintaining aeroponic garden. Flutter mobile app talks to a Raspberry Pi over a REST API to monitor sensors and control every aspect of the grow environment remotely.',
-    problem: 'Aeroponic growing requires precise, continuous management of multiple interdependent variables -- aeration cycles, water temperature, pH levels, light schedules, humidity -- that are impractical to monitor manually around the clock. Missing a parameter drift can kill an entire crop.',
-    solution: 'Flutter mobile app with Firebase authentication communicating with a Python-based Raspberry Pi controller via REST API. Controls include aeration timing and duration, water temperature monitoring, pH sensing with automated dosing pump to add fertilizer on demand, tank agitation, grow light scheduling and physical height adjustment, and a humidity-triggered fan purge. A connected camera supports live feeds and timelapse photography of the grow cycle.',
-    outcome: 'Software fully built and hardware integration designed. System is ready to deploy. Demonstrates end-to-end IoT architecture: mobile frontend, cloud authentication, REST API communication, and physical hardware control across sensors and actuators on a single-board computer.',
+    description: 'Aeroponic growing requires precise, continuous management of multiple interdependent variables that are impractical to monitor manually. I built the system that manages them automatically.',
+    problem: 'Aeration cycles, water temperature, pH levels, dosing schedules, light timing, humidity: each variable affects the others and all of them need to stay within range continuously. Manual monitoring is not a viable long-term solution. Missing a parameter drift can kill an entire crop.',
+    solution: 'Flutter mobile app with Firebase authentication communicating with a Python-based Raspberry Pi controller via REST API. Controls include aeration timing and duration, water temperature monitoring, pH sensing with automated dosing pump, tank agitation, grow light scheduling and physical height adjustment, and a humidity-triggered fan purge. Connected camera supports live feeds and timelapse photography of the full grow cycle.',
+    outcome: 'Software fully built and hardware integration designed. System is ready to deploy. End-to-end IoT architecture: mobile frontend, cloud authentication, REST API communication, and physical hardware control across sensors and actuators on a single-board computer.',
     stack: ['Flutter', 'Python', 'Raspberry Pi', 'Firebase Auth', 'REST API', 'IoT'],
     screenshots: [
       { src: `${PU}/images/magic_garden.png`, caption: 'App Interface' },
@@ -102,16 +102,37 @@ const MANUAL_REPOS = [
   {
     id: 'logistics-optimizer',
     name: 'Logistics-Optimizer',
-    html_url: 'https://github.com/patrickblucas/Logistics-Optimizer',
+    html_url: null,
     imageUrl: `${PU}/images/Logistics_Matrix.png`,
-    description: 'Network routing reference matrix mapping driving distances from 7 facility locations to all 169 Connecticut towns with automatic closest-yard lookup. Built as a static reference after a dynamic Google Maps API implementation generated hundreds of simultaneous calls. Pre-calculating all distances eliminated API costs and latency while maintaining full accuracy for dispatch routing and FOB decisions across the distribution network.',
+    description: 'Connecticut town names are deceptive. Westport and Westbrook sound interchangeable but sit on opposite ends of the state. Salespeople assigning delivery yards from memory were routinely routing trucks 30+ extra miles while billing customers for the shorter haul, eating the difference invisibly in delivery margins. This matrix maps driving distances from all 7 facility locations to all 169 Connecticut towns, color-coded by closest yard, so the right answer takes three seconds instead of local geography knowledge.',
   },
   {
     id: 'truck-balancer',
     name: 'Truck-Balancer',
-    html_url: 'https://github.com/patrickblucas/truck-balancer',
+    html_url: null,
     imageUrl: `${PU}/images/truck_balancer.png`,
-    description: 'Load optimization tool for balancing multi-stop delivery routes across an available fleet. Reduces deadhead miles and improves yard utilization by distributing orders across trucks based on capacity and stop sequencing.',
+    description: 'Ordering full truckloads from hardscape vendors means hitting a precise weight target. Too heavy and the vendor calls you to cut pallets, revise the PO, and resubmit. Too light and they call you to add material, revise the PO, and resubmit. A mixed load with five products at different weights per pallet turns into a load-balancing problem that previously required manual math or a call to purchasing. This tool shows available weight capacity in real time as you build the load. Products that can still accept pallets stay green. Products that would push the truck over the limit turn red. When nothing green remains, the load is optimized. Cut the PO in seconds.',
+  },
+  {
+    id: 'order-estimator',
+    name: 'Order-Estimator',
+    html_url: null,
+    imageUrl: `${PU}/images/order_estimator.png`,
+    description: 'Deciding what to order from hardscape vendors was a memory exercise. The standard approach was cycling through the ERP looking for products that appeared low, relying on recall for the rest, and hoping the smaller volume items did not get missed. They did, regularly. This tool ingests a full inventory export and computes a coverage percentage for every SKU: quantity on hand minus allocations minus year-to-date sales against last year\'s full sales pace. Items closest to a stockout float to the top. Nothing gets missed because the system looks at everything. Output feeds directly into the Truck Balancer to fill loads to the legal weight limit without rework.',
+  },
+  {
+    id: 'release-tracker',
+    name: 'Release-Tracker',
+    html_url: null,
+    imageUrl: `${PU}/images/order_release.png`,
+    description: 'Large direct-ship projects spanning dozens of truckloads over months create a reconciliation gap that standard ERP systems cannot close. Invoices arrive for full loads when trucks delivered partial loads. Product variations ship across releases with no systematic record of what proportion went on which truck. By the time a discrepancy surfaces the job is nearly complete and there is no documentation trail to reconstruct what happened. This system logs every release: driver, date, product, pallet count, weight, BOL number, and invoice number. Every outbound delivery gets matched against it. The running balance by SKU is always current. Applied across $850K in direct-ship projects. Zero unreconciled deliveries since implementation.',
+  },
+  {
+    id: 'og-cheat-sheet',
+    name: 'OG-Cheat-Sheet',
+    html_url: null,
+    imageUrl: `${PU}/images/cheatsheet.png`,
+    description: 'Quoting hardscape material quantities is simple math that goes wrong constantly under pressure. A customer gives you dimensions, you calculate square footage, convert to the vendor\'s sell unit, round to correct pallet and layer quantities, and give them a number. Then they change the dimensions. Then they add a border. Each change means redoing the calculation by hand. Underquote and the customer runs short mid-job and wants a free delivery. Overquote and they return the excess, requiring piece-by-piece inspection before anything goes back to stock. This calculator handles the full chain in real time: enter dimensions, account for borders, and it returns the correct quantity in the vendor\'s sell unit, the number of pallets to charge, and the layer and piece breakdown the yard needs to pull the order. Built after redoing the same calculation four times for one customer. Now used across the sales network.',
   },
 ];
 
@@ -361,29 +382,28 @@ function CaseStudyModal({ project, onClose, onImageZoom }) {
 
 // ── GITHUB REPO CARD ──────────────────────────────────────────────────────────
 function RepoCard({ repo, highlight, imageUrl: imageUrlProp, onImageZoom }) {
-  const imageUrl = imageUrlProp || `https://raw.githubusercontent.com/patrickblucas/${repo.name}/main/snapshot.png`;
+  const imageUrl = imageUrlProp || (repo.html_url ? `https://raw.githubusercontent.com/patrickblucas/${repo.name}/main/snapshot.png` : null);
 
   return (
     <div
       className="card"
       style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}
     >
-      <img
-        src={imageUrl}
-        alt={repo.name}
-        onClick={() => onImageZoom(imageUrl)}
-        onError={(e) => { e.target.style.display = 'none'; }}
-        style={{ width: '100%', height: '130px', objectFit: 'cover', objectPosition: 'top', borderRadius: 'var(--radius)', border: '1px solid var(--border)', cursor: 'pointer', display: 'block', background: 'var(--bg-raised)' }}
-      />
+      {imageUrl && (
+        <img
+          src={imageUrl}
+          alt={repo.name}
+          onClick={() => onImageZoom(imageUrl)}
+          onError={(e) => { e.target.style.display = 'none'; }}
+          style={{ width: '100%', height: '130px', objectFit: 'cover', objectPosition: 'top', borderRadius: 'var(--radius)', border: '1px solid var(--border)', cursor: 'pointer', display: 'block', background: 'var(--bg-raised)' }}
+        />
+      )}
       <p style={{ fontFamily: 'var(--font-display)', fontSize: '1.1rem', letterSpacing: '0.04em', color: 'var(--white)' }}>
         {formatRepoName(repo.name)}
       </p>
       <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)', lineHeight: 1.6, flex: 1 }}>
         {highlight || repo.description || 'No description available.'}
       </p>
-      <a className="btn-ghost" href={repo.html_url} target="_blank" rel="noopener noreferrer" style={{ fontSize: '0.68rem', padding: '0.45rem 0.9rem', alignSelf: 'flex-start' }}>
-        <GitHubIcon size={11} /> View Repo
-      </a>
     </div>
   );
 }

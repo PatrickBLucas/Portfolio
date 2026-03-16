@@ -5,17 +5,17 @@ const JOBS = [
     title: 'Senior Operations & Systems Manager',
     company: 'O&G Industries',
     location: 'Waterbury, CT',
-    dates: '2019 -- Present',
+    dates: '2019 - Present',
     promoted: 'Promoted from Assistant Operations Manager',
-    summary: 'Ten years into a single employer and the scope kept growing -- not because the role expanded on paper, but because the infrastructure kept breaking and I kept fixing it. $2M inventory portfolio, 8+ staff, 7-location ERP transition lead, and a suite of operational tools none of which anyone asked for.',
+    summary: 'Ten years into a single employer and the scope kept growing. Not because the role expanded on paper, but because the infrastructure kept breaking and I kept fixing it. $2M inventory portfolio, 8+ staff, primary ERP evaluator for a 7-location platform selection, and a suite of operational tools none of which anyone asked for.',
     sections: [
       {
         label: null,
         bullets: [
-          'Served as primary evaluator for a 7-location ERPLY ERP implementation. Conducted two structured assessment rounds covering POS, procurement, inventory, receiving, customer management, and back office operations -- producing a 25-page gap analysis and 16-page iterative follow-up. Identified 40+ configuration gaps, pricing risks, security exposures, and workflow requirements the platform would need to support before deployment.',
-          'Inherited the full Orgill purchasing function with no transition and no backfill. Built a procurement system from scratch that compressed a 3-5 day manual ordering cycle to under 15 minutes. $70K+ in annual purchases managed with consistent, auditable accuracy.',
-          'Appointed to lead multi-site physical inventory reconciliation across 5 locations during concurrent staffing gaps. Applied forensic methodology across variance reports -- tracing discrepancies through sales history, receiving logs, and prior adjustments. Requested independent oversight of my own facility counts. Findings compiled into reports reviewed by VP and President.',
-          'Built a suite of operational tools without direction -- routing matrix, procurement automation, load optimization, inventory tracking, job quoting. None were requested. All remain in active daily use.',
+          'Served as primary evaluator for a 7-location ERPLY ERP implementation. Conducted two structured assessment rounds covering POS, procurement, inventory, receiving, customer management, and back office operations, producing a 25-page gap analysis and 16-page iterative follow-up. Identified 40+ configuration gaps, pricing risks, security exposures, and workflow requirements the platform would need to support before go-live. The findings shaped configuration decisions across all locations.',
+          'Inherited the full Orgill purchasing function with no transition and no backfill. Built a procurement system from scratch that compressed a 3-5 day manual ordering cycle to under 15 minutes, eliminated split-box penalties, captured promotional pricing automatically, and consolidated fragmented multi-PO cycles into a single submission. $70K+ in annual purchases managed with consistent, auditable accuracy. No disruption to supply.',
+          'Appointed to lead multi-site physical inventory reconciliation across 5 locations during concurrent staffing gaps. Applied forensic methodology across variance reports, tracing discrepancies through sales history, receiving logs, prior adjustments, and allocation records to find root causes before they became formal discrepancy declarations. Requested independent oversight of my own facility counts. Findings compiled into reports reviewed by VP and President.',
+          'Built a suite of operational tools without direction: routing matrix, procurement automation, load optimization, inventory tracking, job quoting, and release tracking for $850K+ in direct-ship projects. None were requested. All remain in active daily use. Every one was built to eliminate a cost, close a gap, or remove a dependency that nobody else had gotten around to fixing.',
         ],
       },
     ],
@@ -24,7 +24,7 @@ const JOBS = [
     title: 'Assistant Operations Manager',
     company: 'O&G Industries',
     location: 'Bridgeport, CT',
-    dates: '2017 -- 2019',
+    dates: '2017 - 2019',
     promoted: 'Promoted from Inventory Control Specialist',
     summary: 'Managed regional warehouse serving as consolidation hub for a 7-site distribution network.',
     sections: [
@@ -41,7 +41,7 @@ const JOBS = [
     title: 'Inventory Control Specialist',
     company: 'O&G Industries',
     location: 'Stamford, CT',
-    dates: '2015 -- 2017',
+    dates: '2015 - 2017',
     summary: 'Gate operations, BOL verification, and warehouse inventory management.',
     sections: [
       {
