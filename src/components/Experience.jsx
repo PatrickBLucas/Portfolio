@@ -63,14 +63,13 @@ export default function Experience() {
       <h2 className="section-title">Experience</h2>
       <p className="section-subtitle">One employer. A decade of escalating scope and self-initiated impact.</p>
 
-      {/* Download button */}
+      {/* Contact prompt */}
       <div style={{ marginBottom: '2rem' }}>
         <a
           className="btn-primary"
-          href="https://github.com/PatrickBLucas/Portfolio/raw/main/public/Patrick_Lucas_Master_Resume.pdf"
-          download="Patrick_Lucas_Master_Resume.pdf"
+          href="mailto:patrick.b.lucas@gmail.com"
         >
-          Download Resume
+          Request Resume
         </a>
       </div>
 
