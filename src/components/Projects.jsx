@@ -63,9 +63,10 @@ const FEATURED = [
     outcome: '60 pounds lost. Same methodology as every other system I build: define the problem, measure what matters, analyze the patterns, improve the inputs, build controls that make the outcome sustainable. Different inputs. This evolved from an earlier spreadsheet-based project; when the manual workflow hit its ceiling, I rebuilt it as a full application.',
     stack: ['React 18', 'Google Sheets API', 'Google Apps Script', 'Recharts', 'Anthropic Claude API', 'Open Food Facts API', 'USDA FoodData Central', 'OAuth2', 'PWA', 'GitHub Pages'],
     screenshots: [
-      { src: `${PU}/images/thrive_metrics_mobile.jpg`, caption: 'Workout Tracking' },
-      { src: `${PU}/images/thrive_metrics_mobile_2.jpg`, caption: 'Food Log' },
-      { src: `${PU}/images/thrive_metrics_desktop.png`, caption: 'Desktop View' },
+      { src: `${PU}/images/thrive_metrics_desktop_weightloss.png`, caption: 'Weight History + Trend Line' },
+      { src: `${PU}/images/thrive_metrics_mobile_food_log.jpg`, caption: 'Food Log — Today' },
+      { src: `${PU}/images/thrive_metrics_mobile_hr_zones_tool_tip.jpg`, caption: 'HR Zones by Ride' },
+      { src: `${PU}/images/thrive_metrics_desktop_workouts.png`, caption: 'Output + Calories — Last 20 Rides' },
     ],
     github: 'https://github.com/patrickblucas/peloton-dashboard',
     stats: [
