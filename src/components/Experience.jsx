@@ -5,17 +5,17 @@ const JOBS = [
     title: 'Senior Operations & Systems Manager',
     company: 'O&G Industries',
     location: 'Waterbury, CT',
-    dates: '2019 - Present',
+    dates: '2019 -- Present',
     promoted: 'Promoted from Assistant Operations Manager',
-    summary: 'Ten years into a single employer and the scope kept growing. Not because the role expanded on paper, but because the infrastructure kept breaking and I kept fixing it. $2M inventory portfolio, 8+ staff, primary ERP evaluator for a 7-location platform selection, and a suite of operational tools none of which anyone asked for.',
+    summary: 'Ten years into a single employer and the scope kept growing -- not because the role expanded on paper, but because the infrastructure kept breaking and I kept fixing it. $2M inventory portfolio, 8+ staff, 7-location ERP transition lead, and a suite of operational tools none of which anyone asked for.',
     sections: [
       {
         label: null,
         bullets: [
-          'Served as primary evaluator for a 7-location ERPLY ERP implementation. Conducted two structured assessment rounds covering POS, procurement, inventory, receiving, customer management, and back office operations, producing a 25-page gap analysis and 16-page iterative follow-up. Identified 40+ configuration gaps, pricing risks, security exposures, and workflow requirements the platform would need to support before go-live. The findings shaped configuration decisions across all locations.',
-          'Inherited the full Orgill purchasing function with no transition and no backfill. Built a procurement system from scratch that compressed a 3-5 day manual ordering cycle to under 15 minutes, eliminated split-box penalties, captured promotional pricing automatically, and consolidated fragmented multi-PO cycles into a single submission. $70K+ in annual purchases managed with consistent, auditable accuracy. No disruption to supply.',
-          'Appointed to lead multi-site physical inventory reconciliation across 5 locations during concurrent staffing gaps. Applied forensic methodology across variance reports, tracing discrepancies through sales history, receiving logs, prior adjustments, and allocation records to find root causes before they became formal discrepancy declarations. Requested independent oversight of my own facility counts. Findings compiled into reports reviewed by VP and President.',
-          'Built a suite of operational tools without direction: routing matrix, procurement automation, load optimization, inventory tracking, job quoting, and release tracking for $850K+ in direct-ship projects. None were requested. All remain in active daily use. Every one was built to eliminate a cost, close a gap, or remove a dependency that nobody else had gotten around to fixing.',
+          'Served as primary evaluator for a 7-location ERPLY ERP implementation. Conducted two structured assessment rounds covering POS, procurement, inventory, receiving, customer management, and back office operations -- producing a 25-page gap analysis and 16-page iterative follow-up. Identified 40+ configuration gaps, pricing risks, security exposures, and workflow requirements the platform would need to support before deployment.',
+          'Inherited the full Orgill purchasing function with no transition and no backfill. Built a procurement system from scratch that compressed a 3-5 day manual ordering cycle to under 15 minutes. $70K+ in annual purchases managed with consistent, auditable accuracy.',
+          'Oversee physical inventory reconciliation across 4 additional branches, applying forensic methodology across variance reports -- tracing discrepancies through sales history, receiving logs, and prior adjustments. When conducting my own facility\'s counts alongside the others, requested independent oversight from the Inventory Manager to avoid any conflict of interest. Findings compiled into reports reviewed by VP and President.',
+          'Built a suite of operational tools without direction -- routing matrix, procurement automation, load optimization, inventory tracking, job quoting. None were requested. All remain in active daily use.',
         ],
       },
     ],
@@ -24,7 +24,7 @@ const JOBS = [
     title: 'Assistant Operations Manager',
     company: 'O&G Industries',
     location: 'Bridgeport, CT',
-    dates: '2017 - 2019',
+    dates: '2017 -- 2019',
     promoted: 'Promoted from Inventory Control Specialist',
     summary: 'Managed regional warehouse serving as consolidation hub for a 7-site distribution network.',
     sections: [
@@ -32,7 +32,7 @@ const JOBS = [
         label: null,
         bullets: [
           'Wrote and presented a 7-page operational improvement proposal grounded in JIT and workforce motivation theory. It was recognized by the executive team and resulted in promotion.',
-          'Led warehouse layout redesign, SKU rationalization, lean improvements, and safety enhancements. Trained and cross-developed 10+ employees across yard, gate, and counter roles.',
+          'Diagnosed a warehouse layout built on retail-exposure logic rather than pick-efficiency logic; applied Pareto analysis to systematically reposition inventory by velocity. Led inventory rationalization and safety enhancements. Trained and cross-developed 10+ employees across yard, gate, and counter roles.',
         ],
       },
     ],
@@ -41,7 +41,7 @@ const JOBS = [
     title: 'Inventory Control Specialist',
     company: 'O&G Industries',
     location: 'Stamford, CT',
-    dates: '2015 - 2017',
+    dates: '2015 -- 2017',
     summary: 'Gate operations, BOL verification, and warehouse inventory management.',
     sections: [
       {
@@ -63,13 +63,14 @@ export default function Experience() {
       <h2 className="section-title">Experience</h2>
       <p className="section-subtitle">One employer. A decade of escalating scope and self-initiated impact.</p>
 
-      {/* Contact prompt */}
+      {/* Download button */}
       <div style={{ marginBottom: '2rem' }}>
         <a
           className="btn-primary"
-          href="mailto:patrick.b.lucas@gmail.com"
+          href="https://github.com/PatrickBLucas/Portfolio/raw/main/public/Patrick_Lucas_Master_Resume.pdf"
+          download="Patrick_Lucas_Master_Resume.pdf"
         >
-          Request Resume
+          Download Resume
         </a>
       </div>
 
@@ -146,8 +147,8 @@ export default function Experience() {
         </div>
 
         {[
-          { name: 'Google Data Analytics Certificate', detail: 'Coursera, 2023 — Excel, SQL, R, Tableau' },
-          { name: 'SAP S/4HANA Supply Chain Training', detail: 'learning.sap.com — In Progress' },
+          { name: 'Google Data Analytics Certificate', detail: 'Coursera, 2023 -- Excel, SQL, R, Tableau' },
+          { name: 'SAP S/4HANA Supply Chain Training', detail: 'learning.sap.com -- In Progress' },
           { name: 'ISO 9001:2015 QMS Certificate', detail: 'Alison, 2025' },
           { name: 'AS9100D QMS Certificate', detail: 'Alison, 2025' },
         ].map((cert) => (

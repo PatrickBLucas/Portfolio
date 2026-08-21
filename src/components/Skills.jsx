@@ -11,11 +11,11 @@ const SKILL_GROUPS = [
   },
   {
     category: 'Analytics & BI',
-    items: ['SQL', 'R', 'Tableau', 'Power BI', 'Advanced Excel', 'Pivot Tables', 'Dynamic Modeling'],
+    items: ['SQL', 'R', 'Tableau', 'Advanced Excel', 'Pivot Tables', 'Dynamic Modeling'],
   },
   {
     category: 'Frameworks & Standards',
-    items: ['ISO 9001', 'AS9100D', 'Lean / JIT', 'Six Sigma (DMAIC)', 'PDCA', 'S&OP Principles'],
+    items: ['ISO 9001', 'AS9100D', 'JIT', 'Six Sigma (DMAIC)', 'PDCA', 'S&OP Principles'],
   },
   {
     category: 'Operations',
@@ -30,9 +30,9 @@ const SKILL_GROUPS = [
 const TOOLS = [
   { name: 'NEBP-ERP',                  type: 'Full-Stack App',    stack: 'React / Node / PostgreSQL' },
   { name: 'Orgill Orderer',            type: 'Procurement Tool',  stack: 'React / Node / Google Sheets API' },
-  { name: 'Facility Routing Matrix',   type: 'Decision Tool',     stack: 'Google Sheets — 169 towns, 7 yards' },
-  { name: 'Material Specification Calc', type: 'Sales Tool', stack: 'Google Sheets — 6 yrs, 15+ users' },
-  { name: 'Order Calculator',           type: 'Order Gen Tool',    stack: 'Google Sheets + Apps Script — 7 suppliers' },
+  { name: 'Facility Routing Matrix',   type: 'Decision Tool',     stack: 'Google Sheets -- 150+ towns, 7 yards' },
+  { name: 'Material Specification Calc', type: 'Sales Tool', stack: 'Google Sheets -- 15+ users' },
+  { name: 'Order Calculator',           type: 'Order Gen Tool',    stack: 'Google Sheets + Apps Script -- 6 vendors' },
   { name: 'Vendor Order Calculator',   type: 'Procurement Tool',  stack: 'Google Sheets' },
   { name: 'UPM Inventory Tracker',     type: 'Inventory Tool',    stack: 'Google Sheets + Email Alerts' },
   { name: 'Scale Weight Converter',    type: 'Operations Tool',   stack: 'Google Sheets' },
