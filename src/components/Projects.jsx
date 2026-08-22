@@ -24,6 +24,7 @@ const FEATURED = [
       { src: `${PU}/images/nebp_erp_3.png`, caption: 'Dashboard' },
     ],
     github: null,
+    liveUrl: null,
     stats: [
       { value: '0', label: 'Prior System' },
       { value: '6', label: 'User Roles' },
@@ -38,13 +39,14 @@ const FEATURED = [
     tagline: 'Procurement Automation and Decision Support System',
     description: 'A seasonal procurement cycle across 880+ SKUs and multiple supplier programs was being managed from memory. It took 3-5 days per cycle, produced recurring stockouts, and generated fragmented POs that triggered avoidable cost penalties. I replaced it entirely.',
     problem: 'Memory-based ordering across 4-5 fragmented POs per cycle, misallocating $55 landing costs onto low-value orders. Recurring stockouts corrupted demand history and blocked the volume thresholds needed for tier pricing. No systematic way to match promotional ship windows to open inventory needs.',
-    solution: 'Data-driven procurement system ingesting live inventory exports, applying hybrid demand forecasting using prior-year sales with YTD fallback logic, optimizing to case pack quantities, matching active promo programs by ship window, and generating a single upload-ready PO file. The forecasting logic handles new SKUs, seasonality gaps, and partial-year data without manual intervention.',
+    solution: 'Data-driven procurement system ingesting live inventory exports, applying hybrid demand forecasting using prior-year sales with YTD fallback logic, optimizing to case pack quantities, matching active promo programs by ship window, and generating a single upload-ready PO file via CSV integration with the vendor portal. The forecasting logic handles new SKUs, seasonality gaps, and partial-year data without manual intervention.',
     outcome: 'Ordering cycle compressed from 3-5 days to under 15 minutes. Single consolidated PO per cycle. Split-box penalties eliminated. Over $70K in annual purchases managed with consistent, auditable accuracy. This replaced an earlier spreadsheet-based system I built using Apps Script -- when the business outgrew it, I rebuilt the whole thing as a full-stack application.',
-    stack: ['React', 'Vite', 'Node.js', 'Express', 'Google Sheets API', 'Excel Export'],
+    stack: ['React', 'Vite', 'Node.js', 'Express', 'PostgreSQL', 'CSV Integration'],
     screenshots: [
       { src: `${PU}/images/orgill_orderer.png`, caption: 'Order Run Interface' },
     ],
     github: null,
+    liveUrl: null,
     stats: [
       { value: '3-5D', label: 'Before' },
       { value: '15M',  label: 'After' },
@@ -56,12 +58,12 @@ const FEATURED = [
     repoName: 'peloton-dashboard',
     name: 'ThriveMetrics',
     badge: 'Full-Stack PWA',
-    tagline: 'Personal Fitness & Nutrition Dashboard',
-    description: 'A full-stack progressive web app that consolidates fitness and nutrition data from multiple APIs into a single personal dashboard. Built from scratch with no backend infrastructure -- Google Sheets serves as the database.',
-    problem: 'Fitness and nutrition data lives across disconnected platforms: Peloton for workouts, Fitbit for daily activity, manual logs for food. No single view. No automated sync. No way to track calories in vs. calories out against a computed daily target without switching between apps.',
-    solution: 'React 18 PWA with OAuth2 authentication, automated Peloton workout sync via a custom Apps Script integration with token refresh handling, Fitbit daily data sync, and four nutrition entry modes: AI text estimation, live barcode scanning using the native BarcodeDetector API, photo recognition, and manual entry. Barcode lookup queries Open Food Facts and USDA FoodData Central in parallel with UPC-A to EAN-13 fallback. BMR and TDEE computed client-side using the Mifflin-St Jeor formula. All data stored and updated via the Google Sheets API.',
-    outcome: 'A fully functional installable PWA running in production with no monthly infrastructure cost. Demonstrates end-to-end full-stack architecture: OAuth2 flows, third-party API integration, serverless backend via Apps Script, and a polished mobile-first UI. This evolved from an earlier spreadsheet-based data analysis project -- when the manual workflow hit its ceiling, I rebuilt it as a full application.',
-    stack: ['React 18', 'Google Sheets API', 'Google Apps Script', 'Recharts', 'Anthropic Claude API', 'Open Food Facts API', 'USDA FoodData Central', 'OAuth2', 'PWA', 'GitHub Pages'],
+    tagline: 'Fitness, Nutrition & AI Coaching Dashboard',
+    description: 'A full-stack progressive web app consolidating workout, nutrition, weight, and sleep data into a single dashboard with AI coaching. Originally built in Google Sheets, fully migrated to a modern stack: React, Supabase, and Vercel.',
+    problem: 'Fitness and nutrition data lived across disconnected platforms -- Strava for workouts, Fitbit for daily activity, manual logs for food and sleep -- with no single view, no automated sync, and no way to track calories in vs. calories out against a computed daily target without switching between apps. The original Google Sheets version solved this well enough to prove the concept, but hit a ceiling on what a spreadsheet backend could support.',
+    solution: 'React PWA rebuilt on Supabase for authentication, database, and edge functions, deployed live on Vercel. Integrates six external sources: Strava and Fitbit for activity sync, USDA FoodData Central and OpenFoodFacts for nutrition lookup, Gmail for automated report delivery, and the Anthropic Claude API for AI coaching. Generates a weekly AI coach report using dual parallel Claude calls, plus a monthly insurance compliance report that automates a real regulatory reporting requirement.',
+    outcome: 'A fully functional PWA running live in production. Demonstrates end-to-end full-stack architecture on a modern serverless stack -- Supabase auth, database, and edge functions, multi-source API integration, and applied AI/LLM integration outside a work context. Migrated from the earlier Google Sheets-based version once the manual workflow and spreadsheet backend hit their ceiling.',
+    stack: ['React', 'Supabase', 'Vercel', 'Strava API', 'Fitbit API', 'USDA FoodData Central', 'OpenFoodFacts API', 'Gmail API', 'Anthropic Claude API'],
     screenshots: [
       { src: `${PU}/images/thrive_metrics_desktop_workouts.png`, caption: 'Desktop - Workouts' },
       { src: `${PU}/images/thrive_metrics_desktop_workouts_extended.png`, caption: 'Desktop - Workout Detail' },
@@ -72,10 +74,11 @@ const FEATURED = [
       { src: `${PU}/images/thrive_metrics_mobile_hr_zones_tool_tip.jpg`, caption: 'HR Zones' },
     ],
     github: 'https://github.com/patrickblucas/peloton-dashboard',
+    liveUrl: 'https://peloton-dashboard-kappa.vercel.app',
     stats: [
-      { value: '4', label: 'Entry Modes' },
-      { value: '3', label: 'API Sources' },
-      { value: '$0', label: 'Infra Cost' },
+      { value: '6', label: 'Integrations' },
+      { value: '2', label: 'AI Reports' },
+      { value: '4', label: 'Data Types' },
     ],
   },
   {
@@ -93,6 +96,7 @@ const FEATURED = [
       { src: `${PU}/images/magic_garden.png`, caption: 'App Interface' },
     ],
     github: 'https://github.com/patrickblucas/Renees-Magic-Garden',
+    liveUrl: null,
     stats: [
       { value: '8+', label: 'Sensors & Controls' },
       { value: '1', label: 'Raspberry Pi' },
@@ -127,6 +131,16 @@ function GitHubIcon({ size = 14 }) {
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
       <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.11.82-.26.82-.58v-2.03c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5 1 .11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 013.01-.4c1.02 0 2.05.14 3.01.4 2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.25 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.21.7.82.58C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/>
+    </svg>
+  );
+}
+
+function ExternalLinkIcon({ size = 13 }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+      <polyline points="15 3 21 3 21 9" />
+      <line x1="10" y1="14" x2="21" y2="3" />
     </svg>
   );
 }
@@ -352,11 +366,19 @@ function CaseStudyModal({ project, onClose, onImageZoom }) {
             </div>
           </div>
 
-          {project.github && (
-            <a className="btn-primary" href={project.github} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
-              <GitHubIcon size={13} /> View on GitHub
-            </a>
-          )}
+          {/* Links */}
+          <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap' }}>
+            {project.liveUrl && (
+              <a className="btn-primary" href={project.liveUrl} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
+                <ExternalLinkIcon size={13} /> View Live
+              </a>
+            )}
+            {project.github && (
+              <a className="btn-ghost" href={project.github} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
+                <GitHubIcon size={13} /> View on GitHub
+              </a>
+            )}
+          </div>
         </div>
       </div>
     </Modal>

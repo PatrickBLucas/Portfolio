@@ -7,7 +7,7 @@ const SKILL_GROUPS = [
   },
   {
     category: 'Development',
-    items: ['React', 'Vite', 'Node.js', 'Express', 'PostgreSQL', 'JWT Auth', 'Google Apps Script', 'REST APIs', 'Google Maps API'],
+    items: ['React', 'Vite', 'Node.js', 'Express', 'PostgreSQL', 'Supabase', 'JWT Auth', 'Google Apps Script', 'REST APIs', 'Google Maps API'],
   },
   {
     category: 'Analytics & BI',
@@ -19,23 +19,30 @@ const SKILL_GROUPS = [
   },
   {
     category: 'Operations',
-    items: ['Multi-Site Inventory', 'Procurement Modeling', 'Demand Forecasting', 'Vendor Management', 'Supply Chain Risk', 'Load Optimization', 'OSHA Compliance'],
+    items: ['Multi-Site Inventory', 'Procurement Modeling', 'Demand Forecasting', 'Vendor Management', 'Supply Chain Risk', 'Load Optimization', 'OSHA Compliance', 'DOT Compliance'],
   },
   {
     category: 'Platforms & Tools',
-    items: ['Google Workspace', 'Microsoft 365', 'HammerTech', 'CORVU / HyperVu', 'EmailJS', 'GitHub Pages'],
+    items: ['Google Workspace', 'Microsoft 365', 'HammerTech', 'CORVU / HyperVu', 'EmailJS', 'GitHub Pages', 'Vercel'],
   },
 ];
 
 const TOOLS = [
-  { name: 'NEBP-ERP',                  type: 'Full-Stack App',    stack: 'React / Node / PostgreSQL' },
-  { name: 'Orgill Orderer',            type: 'Procurement Tool',  stack: 'React / Node / Google Sheets API' },
-  { name: 'Facility Routing Matrix',   type: 'Decision Tool',     stack: 'Google Sheets -- 150+ towns, 7 yards' },
-  { name: 'Material Specification Calc', type: 'Sales Tool', stack: 'Google Sheets -- 15+ users' },
-  { name: 'Order Calculator',           type: 'Order Gen Tool',    stack: 'Google Sheets + Apps Script -- 6 vendors' },
-  { name: 'Vendor Order Calculator',   type: 'Procurement Tool',  stack: 'Google Sheets' },
-  { name: 'UPM Inventory Tracker',     type: 'Inventory Tool',    stack: 'Google Sheets + Email Alerts' },
-  { name: 'Scale Weight Converter',    type: 'Operations Tool',   stack: 'Google Sheets' },
+  { name: 'NEBP-ERP',                        type: 'Full-Stack App',   stack: 'React / Node / PostgreSQL' },
+  { name: 'Orgill Orderer',                  type: 'Procurement Tool', stack: 'React / Node / PostgreSQL' },
+  { name: 'ThriveMetrics',                   type: 'Full-Stack PWA',   stack: 'React / Supabase / Vercel' },
+  { name: 'O&G Material Calculator',         type: 'Sales Tool',       stack: 'React / Vite / Node / PostgreSQL -- intranet-hosted' },
+  { name: 'Facility Routing Matrix',         type: 'Decision Tool',    stack: 'Google Sheets -- 150+ towns, 7 yards' },
+  { name: 'Material Specification Calc',     type: 'Sales Tool',       stack: 'Google Sheets -- 15+ users' },
+  { name: 'Vendor Order Recommendation Engine', type: 'Procurement Tool', stack: 'Google Sheets + Apps Script -- 6 vendors' },
+  { name: 'Truck Load & DOT Compliance Planner', type: 'Logistics Tool', stack: 'Google Sheets + Apps Script' },
+  { name: 'UPM Stock Tracker',               type: 'Inventory Tool',   stack: 'Google Sheets + Email Alerts' },
+  { name: 'Fork Truck Hours Tracker',        type: 'Equipment Tool',   stack: 'Google Sheets' },
+  { name: 'Lehigh Drop Ship Pricing Calculator', type: 'Pricing Tool', stack: 'Google Sheets -- Excel formulas (VLOOKUP/XLOOKUP)' },
+  { name: 'Open PO by Vendor Report Tool',   type: 'Reporting Tool',   stack: 'Google Sheets + Apps Script' },
+  { name: 'Open Orders Aging Report Tool',   type: 'Reporting Tool',   stack: 'Google Sheets + Apps Script' },
+  { name: 'Scale Weight Converter',          type: 'Operations Tool',  stack: 'Google Sheets' },
+  { name: 'Additional Operational Tools Library', type: 'Tool Collection', stack: 'Google Sheets + Apps Script -- 10+ tools' },
 ];
 
 export default function Skills() {
