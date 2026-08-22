@@ -63,9 +63,13 @@ const FEATURED = [
     outcome: 'A fully functional installable PWA running in production with no monthly infrastructure cost. Demonstrates end-to-end full-stack architecture: OAuth2 flows, third-party API integration, serverless backend via Apps Script, and a polished mobile-first UI. This evolved from an earlier spreadsheet-based data analysis project -- when the manual workflow hit its ceiling, I rebuilt it as a full application.',
     stack: ['React 18', 'Google Sheets API', 'Google Apps Script', 'Recharts', 'Anthropic Claude API', 'Open Food Facts API', 'USDA FoodData Central', 'OAuth2', 'PWA', 'GitHub Pages'],
     screenshots: [
-      { src: `${PU}/images/thrive_metrics_mobile.jpg`, caption: 'Workout Tracking' },
-      { src: `${PU}/images/thrive_metrics_mobile_2.jpg`, caption: 'Food Log' },
-      { src: `${PU}/images/thrive_metrics_desktop.png`, caption: 'Desktop View' },
+      { src: `${PU}/images/thrive_metrics_desktop_workouts.png`, caption: 'Desktop - Workouts' },
+      { src: `${PU}/images/thrive_metrics_desktop_workouts_extended.png`, caption: 'Desktop - Workout Detail' },
+      { src: `${PU}/images/thrive_metrics_desktop_weightloss.png`, caption: 'Desktop - Weight Loss Tracking' },
+      { src: `${PU}/images/thrive_metrics_mobile_workout_log.jpg`, caption: 'Workout Log' },
+      { src: `${PU}/images/thrive_metrics_mobile_food_log.jpg`, caption: 'Food Log' },
+      { src: `${PU}/images/thrive_metrics_mobile_AI_coach.jpg`, caption: 'AI Coach' },
+      { src: `${PU}/images/thrive_metrics_mobile_hr_zones_tool_tip.jpg`, caption: 'HR Zones' },
     ],
     github: 'https://github.com/patrickblucas/peloton-dashboard',
     stats: [
