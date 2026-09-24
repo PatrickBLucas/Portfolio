@@ -112,7 +112,7 @@ const MANUAL_REPOS = [
     name: 'Logistics-Optimizer',
     html_url: 'https://github.com/patrickblucas/Logistics-Optimizer',
     imageUrl: `${PU}/images/Logistics_Matrix.png`,
-    description: 'Network routing reference matrix mapping driving distances from 7 facility locations to 150+ Connecticut towns with automatic closest-yard lookup. Built as a static reference after a dynamic Google Maps API implementation generated hundreds of simultaneous calls. Pre-calculating all distances eliminated API costs and latency while maintaining full accuracy for dispatch routing and FOB decisions across the distribution network.',
+    description: 'Network routing reference matrix mapping driving distances from 7 facility locations to 169 Connecticut towns with automatic closest-yard lookup. Built as a static reference after a dynamic Google Maps API implementation proved unreliable under real-world load. Pre-calculating all distances trades dynamic freshness for speed and reliability, eliminating API costs and latency while maintaining full accuracy for dispatch routing and FOB decisions across the distribution network.',
   },
   {
     id: 'truck-balancer',

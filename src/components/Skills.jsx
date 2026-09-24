@@ -32,7 +32,7 @@ const TOOLS = [
   { name: 'Orgill Orderer',                  type: 'Procurement Tool', stack: 'React / Node / PostgreSQL' },
   { name: 'ThriveMetrics',                   type: 'Full-Stack PWA',   stack: 'React / Supabase / Vercel' },
   { name: 'O&G Material Calculator',         type: 'Sales Tool',       stack: 'React / Vite / Node / PostgreSQL -- intranet-hosted' },
-  { name: 'Facility Routing Matrix',         type: 'Decision Tool',    stack: 'Google Sheets -- 150+ towns, 7 yards' },
+  { name: 'Facility Routing Matrix',         type: 'Decision Tool',    stack: 'Google Sheets -- 169 towns, 7 yards' },
   { name: 'Material Specification Calc',     type: 'Sales Tool',       stack: 'Google Sheets -- 15+ users' },
   { name: 'Vendor Order Recommendation Engine', type: 'Procurement Tool', stack: 'Google Sheets + Apps Script -- 6 vendors' },
   { name: 'Truck Load & DOT Compliance Planner', type: 'Logistics Tool', stack: 'Google Sheets + Apps Script' },

@@ -10,15 +10,33 @@ const JOBS = [
     summary: 'Ten years into a single employer and the scope kept growing -- not because the role expanded on paper, but because the infrastructure kept breaking and I kept fixing it. $2M inventory portfolio, 8+ staff, 7-location ERP transition lead, and a suite of operational tools none of which anyone asked for.',
     sections: [
       {
-        label: null,
+        label: 'ERP & Systems',
         bullets: [
           'Served as primary evaluator for a 7-location ERPLY ERP implementation. Conducted two structured assessment rounds covering POS, procurement, inventory, receiving, customer management, and back office operations -- producing a 25-page gap analysis and 16-page iterative follow-up. Identified 40+ configuration gaps, pricing risks, security exposures, and workflow requirements the platform would need to support before deployment.',
-          'Part of the initial two-location pilot for JDE EnterpriseOne time and attendance testing, ahead of division-wide rollout to all locations. Remain the only location conducting ongoing UAT and defect documentation, having identified issues across two release cycles including a non-quarter-hour increment validation failure, ETO stacking above full shift hours, and a cost center regression that reappeared after each new build.',
+          'Part of the initial two-location pilot for JDE EnterpriseOne time and attendance testing, ahead of division-wide rollout to all locations. Remain the only location conducting ongoing UAT and defect documentation, having identified issues across two release cycles including a time-entry parsing bug (changing "08:15PM" to "7:15am" produced "1:00PM" instead of the expected "07:15AM"), a negative-hours bug allowing overnight shifts to save with a negative duration, and a cost center regression that reappeared after each new build.',
+          'Serve as an informal, cross-location go-to resource on APlus order management and inventory behavior: resolved a stuck partial-shipment pick issue for another location\'s Assistant Manager via remote screen share on a weekend with no support staff available, correcting both the immediate ticket and the underlying picking procedure. Separately, Credit department staff have repeatedly routed account configuration questions directly to me, including a settings change a 25-year salesperson and a 15-year assistant manager both believed was not possible.',
+        ],
+      },
+      {
+        label: 'Procurement & Vendor Management',
+        bullets: [
           'Inherited the full Orgill purchasing function with no transition and no backfill. Built a procurement system from scratch that compressed a 3-5 day manual ordering cycle to under 15 minutes. $70K+ in annual purchases managed with consistent, auditable accuracy.',
-          'Oversee physical inventory reconciliation across 4 additional branches, applying forensic methodology across variance reports -- tracing discrepancies through sales history, receiving logs, and prior adjustments. When conducting my own facility\'s counts alongside the others, requested independent oversight from the Inventory Manager to avoid any conflict of interest. Findings compiled into reports reviewed by VP and President.',
           'Brought in directly by ownership to diagnose recurring pallet inventory losses. Identified five distinct, compounding failure points rather than a single cause, pushed back on a proposed blanket fix that would have roughly quadrupled the units requiring physical count without resolving the underlying problem, and delivered a training- and process-based recommendation instead. Diagnosed $2,220 in recoverable write-offs at one location as process failure rather than shrinkage and designed a 7-step pallet return SOP to close the gap.',
-          'Orchestrated $850K+ in multi-vendor construction logistics across 35+ truckloads and 2 major projects with zero delays attributable to load planning or customer communication, building custom tracking systems to work around ERP limitations with generic item codes.',
-          'Proactively identify and resolve physical hazards before they cause incidents: had exposed conduit surfacing through yard asphalt repaired before it could be caught by a snowplow, flagged a retaining wall at risk of structural failure, and traced asphalt fragments appearing in material bins back to pavement deterioration requiring repair.',
+          'Orchestrated multi-vendor construction logistics across 2 major projects and 75+ confirmed truckloads, 39 on one project\'s brick shipments alone, tracked and cross-verified line by line, with zero delays attributable to load planning or customer communication. Built manual reconciliation trackers to restore visibility the ERP couldn\'t natively provide on material moving under multiple item codes across multiple receivers on the same job.',
+          'Require signed special-order agreements and deposits on non-stock material to hold customers accountable for committed orders, releasing customers from that obligation only when confident the material can be resold elsewhere rather than defaulting to a write-off.',
+        ],
+      },
+      {
+        label: 'Inventory & Supply Chain',
+        bullets: [
+          'Covered physical inventory accounting and reconciliation for four additional yards alongside my own for one season while a colleague was out, overseeing count reconciliation across a combined $6.7M in on-hand inventory value. Conducted forensic inventory investigations combining live recounts, ERP history audits, receiving logs, and sales data to identify discrepancies and recover financial exposure. Findings compiled into reports reviewed by VP and President.',
+          'Developed a mystery-tote liquidation strategy for aged, hard-to-sell tools: bundled slow-moving stock with a gift card and sold sight-unseen at a flat price, clearing dead inventory with zero customer complaints since the format itself set expectations upfront.',
+        ],
+      },
+      {
+        label: 'Operations & Facilities',
+        bullets: [
+          'Proactively identify and resolve physical hazards before they cause incidents, championing a safety culture that goes beyond formal compliance: had exposed conduit surfacing through yard asphalt repaired before it could be caught by a snowplow, flagged a retaining wall at risk of structural failure, and traced asphalt fragments appearing in material bins back to pavement deterioration requiring repair.',
           'Built a suite of operational tools without direction -- routing matrix, procurement automation, load optimization, inventory tracking, job quoting. None were requested. All remain in active daily use.',
         ],
       },
@@ -38,6 +56,7 @@ const JOBS = [
           'Wrote and presented a 7-page operational improvement proposal grounded in JIT and workforce motivation theory. It was recognized by the executive team and resulted in promotion.',
           'Diagnosed a warehouse layout built on retail-exposure logic rather than pick-efficiency logic. Quantified the cost of the mismatch on a single high-velocity SKU (13.4 miles of unnecessary annual forklift travel) as a proof point, then applied 80/20 Pareto analysis to systematically reposition inventory by velocity. Led inventory rationalization and safety enhancements. Trained and cross-developed 10+ employees across yard, gate, and counter roles.',
           'Took over stucco tinting operations for NY Stucco following Parex\'s acquisition, after diagnosing a root-cause formula mix-up where staff could apply the wrong base preset across product lines, leading to failed applications and, in some cases, O&G covering customer labor costs. Restructured formulas by product and base and built a full mixing protocol, significantly reducing color mismatches.',
+          'Built an informal demand-signal system where staff flagged specific item numbers by email as they sold through them, routed to a dedicated folder for review against historical sales data before deciding whether and how much to reorder, closing a gap left by the facility\'s reduced product breadth.',
         ],
       },
     ],
@@ -146,9 +165,10 @@ export default function Experience() {
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1rem' }}>
         <div className="card fade-up fade-up-1">
           <p style={{ fontFamily: 'var(--font-mono)', fontSize: '0.62rem', color: 'var(--amber)', letterSpacing: '0.12em', textTransform: 'uppercase', marginBottom: '0.5rem' }}>Degree</p>
-          <p style={{ fontFamily: 'var(--font-display)', fontSize: '1.3rem', color: 'var(--white)', letterSpacing: '0.04em', marginBottom: '0.3rem' }}>B.S. Business Management</p>
+          <p style={{ fontFamily: 'var(--font-display)', fontSize: '1.3rem', color: 'var(--white)', letterSpacing: '0.04em', marginBottom: '0.3rem' }}>B.S. Business Management, Summa Cum Laude</p>
           <p style={{ fontFamily: 'var(--font-mono)', fontSize: '0.72rem', color: 'var(--text-muted)' }}>Southern New Hampshire University, 2018</p>
-          <p style={{ fontFamily: 'var(--font-mono)', fontSize: '0.68rem', color: 'var(--text-dim)', marginTop: '0.3rem' }}>Ops & Project Management / IT Minor / GPA 3.98</p>
+          <p style={{ fontFamily: 'var(--font-mono)', fontSize: '0.68rem', color: 'var(--text-dim)', marginTop: '0.3rem' }}>Ops & Project Management / IT Minor / GPA 3.96</p>
+          <p style={{ fontFamily: 'var(--font-mono)', fontSize: '0.68rem', color: 'var(--text-dim)' }}>President's List, all 10 terms enrolled</p>
         </div>
 
         {[
